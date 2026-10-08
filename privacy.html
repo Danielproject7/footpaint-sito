@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · FootPaint</title>
+<meta name="description" content="Come il sito footpaint.it tratta i dati di chi lo visita e di chi entra in lista d'attesa.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo/footpaint-icona.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--page:#FAF7F2;--txt:#1E1B3A;--muted:#6F6B85;--line:#E4DFEC;--lilac:#7C6CF2;--green:#38F269}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--page:#121024;--txt:#ECEAF8;--muted:#A19DB8;--line:#2C2850}}
+  :root[data-theme="dark"]{--page:#121024;--txt:#ECEAF8;--muted:#A19DB8;--line:#2C2850}
+  body{margin:0;background:var(--page);color:var(--txt);font-family:Outfit,system-ui,sans-serif;line-height:1.6}
+  .wrap{max-width:720px;margin:0 auto;padding:32px 16px 64px}
+  a{color:var(--lilac)}
+  .brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:20px;text-decoration:none;color:var(--txt)}
+  .brand img{width:30px;height:30px;border-radius:7px}
+  h1{font-size:34px;letter-spacing:-.02em;margin:28px 0 6px}
+  h2{font-size:20px;margin:28px 0 6px}
+  p,li{color:var(--muted);font-size:16px}
+  .lang{display:inline-flex;background:#0000000d;border-radius:99px;padding:3px;margin-top:16px}
+  .lang button{font:inherit;font-weight:700;font-size:13px;border:0;background:transparent;color:var(--muted);border-radius:99px;padding:6px 12px;cursor:pointer}
+  .lang button[aria-pressed="true"]{background:#fff;color:#1E1B3A}
+  [hidden]{display:none!important}
+  .date{font-size:13px;color:var(--muted)}
+  hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="index.html"><img src="logo/footpaint-icona.svg" alt="">FootPaint</a>
+  <div class="lang" role="group" aria-label="Lingua"><button data-lang="it" aria-pressed="true">IT</button><button data-lang="en" aria-pressed="false">EN</button></div>
+
+  <section id="it">
+    <h1>Privacy del sito footpaint.it</h1>
+    <p class="date">Aggiornata l'8 ottobre 2026. Riguarda solo questo sito; la privacy dell'app FootPaint sarà pubblicata con l'app.</p>
+    <h2>Chi tratta i dati</h2>
+    <p>Il titolare è la persona che sviluppa FootPaint. Per qualsiasi domanda: <a href="mailto:ciao@footpaint.it">ciao@footpaint.it</a>.</p>
+    <h2>Cosa raccoglie questo sito</h2>
+    <ul>
+      <li><b>Nessun cookie, nessuna statistica, nessuna pubblicità.</b> Il sito non usa strumenti di tracciamento e non profila chi lo visita.</li>
+      <li><b>Lista d'attesa.</b> Il modulo apre il tuo programma di posta con un messaggio già pronto: l'email arriva a ciao@footpaint.it e viene usata solo per avvisarti dell'uscita dell'app, al massimo una volta al mese. Non viene ceduta a nessuno. Per cancellarti basta rispondere "cancellami".</li>
+      <li><b>Lingua scelta.</b> La scelta tra italiano e inglese resta nel tuo browser (localStorage) e non viene inviata a nessuno.</li>
+    </ul>
+    <h2>Servizi tecnici usati</h2>
+    <ul>
+      <li><b>Hosting su GitHub Pages</b> (GitHub, Inc.): per servire le pagine riceve l'indirizzo IP del visitatore e lo conserva nei registri tecnici secondo la <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy di GitHub</a>.</li>
+      <li><b>Carattere Outfit da Google Fonts</b> (Google LLC): il browser scarica il carattere dai server di Google, che ricevono l'indirizzo IP. Nessun dato personale viene inviato oltre a questo.</li>
+      <li><b>Mappe:</b> i dati delle vie vengono da OpenStreetMap (© OpenStreetMap contributors, licenza ODbL) e sono inclusi nella pagina; non viene contattato alcun server di mappe.</li>
+    </ul>
+    <h2>I tuoi diritti</h2>
+    <p>Puoi chiedere in qualsiasi momento quali dati abbiamo su di te, correggerli o farli cancellare scrivendo a ciao@footpaint.it. Hai anche il diritto di rivolgerti al Garante per la protezione dei dati personali.</p>
+  </section>
+
+  <section id="en" hidden>
+    <h1>Privacy for footpaint.it</h1>
+    <p class="date">Updated 8 October 2026. This covers the website only; the FootPaint app privacy policy will be published with the app.</p>
+    <h2>Who handles your data</h2>
+    <p>The data controller is the person building FootPaint. Any question: <a href="mailto:ciao@footpaint.it">ciao@footpaint.it</a>.</p>
+    <h2>What this site collects</h2>
+    <ul>
+      <li><b>No cookies, no analytics, no ads.</b> The site uses no tracking tools and does not profile visitors.</li>
+      <li><b>Waiting list.</b> The form opens your mail app with a ready message: the email reaches ciao@footpaint.it and is used only to tell you when the app is out, at most once a month. It is never shared. To leave, reply "remove me".</li>
+      <li><b>Language choice.</b> Your choice between Italian and English stays in your browser (localStorage) and is sent to nobody.</li>
+    </ul>
+    <h2>Technical services</h2>
+    <ul>
+      <li><b>Hosting on GitHub Pages</b> (GitHub, Inc.): to serve the pages it receives the visitor's IP address and keeps it in technical logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</li>
+      <li><b>Outfit typeface from Google Fonts</b> (Google LLC): the browser downloads the font from Google's servers, which receive the IP address. No other personal data is sent.</li>
+      <li><b>Maps:</b> street data comes from OpenStreetMap (© OpenStreetMap contributors, ODbL licence) and is embedded in the page; no map server is contacted.</li>
+    </ul>
+    <h2>Your rights</h2>
+    <p>You can ask at any time what data we hold about you, have it corrected or deleted by writing to ciao@footpaint.it. You may also lodge a complaint with your data protection authority.</p>
+  </section>
+
+  <hr>
+  <p><a href="index.html">← footpaint.it</a></p>
+</div>
+<script>
+  function setLang(l){ document.documentElement.lang = l; document.getElementById('it').hidden = l !== 'it'; document.getElementById('en').hidden = l !== 'en'; document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === l))); try { localStorage.setItem('fp-lang', l); } catch (e) {} }
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+  (function(){ let l = 'it'; try { l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('fp-lang') || (navigator.language.startsWith('en') ? 'en' : 'it'); } catch (e) {} setLang(l === 'en' ? 'en' : 'it'); })();
+</script>
+</body>
+</html>
