@@ -277,7 +277,9 @@
   .journal .e{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
   .journal .e:first-child{border-top:0;padding-top:0}
   .journal .d{font-weight:700;color:var(--lilac);font-size:13px;padding-top:2px;white-space:nowrap}
-  .founder .quote{font-size:clamp(22px,2.6vw,30px);font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:16px 0 18px}
+  .vision{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:12px}
+  .vision li{font-size:clamp(18px,2vw,22px);font-weight:600;line-height:1.3;padding-left:34px;position:relative}
+  .vision li::before{content:"";position:absolute;left:0;top:.55em;width:22px;height:4px;border-radius:2px;background:var(--green)}
   @media (max-width:860px){.founder .wrap{grid-template-columns:1fr}}
 
   /* ===== lista d'attesa ===== */
@@ -395,9 +397,9 @@
     <div>
       <span class="label" data-i18n="hero.eyebrow">Esce il 1° gennaio 2027 · preordina a metà prezzo</span>
       <h1 data-i18n-html="hero.title">Ogni passo <span class="mark">lascia il segno</span>.</h1>
-      <p class="lead muted" data-i18n="hero.lead">Cammina, corri o pedala: le vie che percorri si colorano sulla mappa. Col tempo la tua città diventa una tela dipinta da te.</p>
+      <p class="lead muted" data-i18n="hero.lead">Cammina, corri o pedala: le vie che percorri si colorano sulla mappa. Giorno dopo giorno la tua città diventa un'opera tua.</p>
       <div class="hero-cta">
-        <a class="btn btn-p" href="#lista" data-i18n="hero.cta1">Entra in lista d'attesa</a>
+        <a class="btn btn-p" href="#lista" data-i18n="hero.cta1">Prenota il tuo posto</a>
         <a class="btn btn-o" href="#prova" data-i18n="hero.cta2">Prova l'app qui</a>
       </div>
       <div class="hero-note">
@@ -440,7 +442,7 @@
     <span><svg><use href="#i-map"/></svg><span data-i18n="proof.1">Dati OpenStreetMap, tutte le vie d'Italia</span></span>
     <span><svg><use href="#i-phone"/></svg><span data-i18n="proof.2">iOS e Android</span></span>
     <span><svg><use href="#i-lock"/></svg><span data-i18n="proof.3">La tua posizione resta tua</span></span>
-    <span><svg><use href="#i-person"/></svg><span data-i18n="proof.4">Fatta da una persona sola</span></span>
+    <span><svg><use href="#i-person"/></svg><span data-i18n="proof.4">Un fondatore, un'idea, tutte le vie d'Italia</span></span>
   </div>
 </div>
 
@@ -450,7 +452,7 @@
     <div class="sec-head">
       <span class="label" data-i18n="how.eyebrow">Come funziona</span>
       <h2 data-i18n="how.title">Tre gesti. Poi ci pensa la città.</h2>
-      <p class="muted" data-i18n="how.lead">Non serve correre. Vale la passeggiata col cane, la spesa a piedi, il giro in bici della domenica.</p>
+      <p class="muted" data-i18n="how.lead">Non serve correre. La passeggiata col cane, la spesa a piedi e il giro in bici della domenica valgono quanto una maratona.</p>
     </div>
     <div class="steps">
       <article class="step">
@@ -566,7 +568,7 @@
     <div class="sec-head">
       <span class="label" data-i18n="feat.eyebrow">Funzioni</span>
       <h2 data-i18n="feat.title">Non ti cronometra. Ti colora.</h2>
-      <p class="muted" data-i18n="feat.lead">Niente cronometro, niente classifiche. Solo la domanda "dove sono stato?" con una risposta dipinta.</p>
+      <p class="muted" data-i18n="feat.lead">Niente cronometro, niente classifiche. Una sola domanda, "dove sono stato?", e una risposta che si vede.</p>
     </div>
     <div class="bento">
       <article class="tile t-a">
@@ -694,6 +696,7 @@
 <section class="founder" style="padding-top:0">
   <div class="wrap">
     <div class="journal">
+      <div class="e"><span class="d" data-i18n="j.0d">Oggi</span><span data-i18n="j.0">Cosa funziona già nell'app, prima ancora di uscire.</span></div>
       <div class="e"><span class="d" data-i18n="j.1d">Fatto</span><span data-i18n="j.1">Colori Plus: tavolozza nel profilo e cambio colore a metà uscita.</span></div>
       <div class="e"><span class="d" data-i18n="j.2d">Fatto</span><span data-i18n="j.2">Targhette di quartiere, Piazze e Lungomare prese dal nome della via.</span></div>
       <div class="e"><span class="d" data-i18n="j.3d">Fatto</span><span data-i18n="j.3">Gruppi con obiettivo comune e invito con un link che apre l'app.</span></div>
@@ -701,10 +704,15 @@
       <div class="e"><span class="d" data-i18n="j.5d">Prossimo</span><span data-i18n="j.5">Colorazione in tempo reale sul telefono e auto-pausa da fermo. Poi i primi tester.</span></div>
     </div>
     <div>
-      <span class="label" data-i18n="f.eyebrow">Dietro le quinte</span>
-      <p class="quote" data-i18n="f.quote">"Sto costruendo FootPaint da solo, un'ora al giorno. Ogni settimana racconto cosa ha funzionato e cosa no."</p>
-      <p class="muted" data-i18n="f.p">Niente ufficio stampa. Solo una mappa che si colora e una persona che la fa funzionare. Se vuoi seguire il percorso, è su Instagram e LinkedIn.</p>
-      <p style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-o" href="#">Instagram</a><a class="btn btn-o" href="#">LinkedIn</a></p>
+      <span class="label" data-i18n="f.eyebrow">La visione</span>
+      <h2 style="margin:14px 0 18px" data-i18n="f.title">Non un'altra app di fitness. La prima mappa che dipingi vivendo.</h2>
+      <ul class="vision">
+        <li data-i18n="f.1">Ogni città è una tela bianca. Chi la percorre, la colora.</li>
+        <li data-i18n="f.2">Si parte dall'Italia, con tutte le vie di tutte le città già sulla mappa.</li>
+        <li data-i18n="f.3">Zero pubblicità, zero dati venduti. Il modello è semplice: chi colora di più sceglie Plus.</li>
+      </ul>
+      <p class="muted" data-i18n="f.p">FootPaint nasce da una domanda semplice: dove sono stato davvero? La risposta è una mappa che cresce con te, via dopo via. Preordina oggi e colora dal primo giorno.</p>
+      <p style="margin-top:18px"><a class="btn btn-p" href="#lista" data-i18n="f.cta">Prenota il tuo posto</a></p>
     </div>
   </div>
 </section>
@@ -715,7 +723,7 @@
     <svg class="bgmap" id="waitmap" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#base"/><use href="#painted"/></svg>
     <div class="wrap">
       <span class="label" data-i18n="w.eyebrow">Lista d'attesa</span>
-      <h2 data-i18n="w.title">Prima pennellata il 1° gennaio 2027</h2>
+      <h2 data-i18n="w.title">La prima pennellata è tua. Il 1° gennaio 2027.</h2>
       <p data-i18n="w.lead">Lascia nome ed email: ti contatto io quando è il momento, al massimo una email al mese. Chi preordina entro il 31 dicembre 2026 usa la versione di prova da subito.</p>
       <form class="form" id="waitform" novalidate>
         <input type="text" id="nome" required autocomplete="name" data-i18n-ph="w.name" placeholder="Nome" data-i18n-aria="w.name" aria-label="Nome">
@@ -734,7 +742,7 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="label" data-i18n="faq.eyebrow">Domande</span>
-      <h2 data-i18n="faq.title">Quello che mi chiedono di solito</h2>
+      <h2 data-i18n="faq.title">Le domande che ci fanno più spesso</h2>
     </div>
     <div class="faq">
       <details><summary data-i18n="faq.1q">È come Strava?</summary><p data-i18n="faq.1a">Si affianca a Strava, non la sostituisce. Strava ti cronometra, FootPaint colora la mappa delle vie che hai percorso. Puoi usarle insieme.</p></details>
@@ -752,7 +760,7 @@
   <div class="wrap">
     <div>
       <a class="brand" href="#top" style="font-size:20px"><svg viewBox="0 0 120 120"><use href="#logoF1"/></svg>FootPaint</a>
-      <p class="muted" style="margin-top:12px;max-width:300px" data-i18n="ft.tag">Cammina, corri o pedala: le vie che percorri si colorano. La tua città è una tela.</p>
+      <p class="muted" style="margin-top:12px;max-width:300px" data-i18n="ft.tag">Ogni passo lascia il segno. La tua città è la tela, tu hai il pennello.</p>
       <div class="stores">
         <a class="store" href="#lista"><svg><use href="#i-apple"/></svg><span>App Store<small data-i18n="ft.soon">presto, entra in lista</small></span></a>
         <a class="store" href="#lista"><svg><use href="#i-play-store"/></svg><span>Google Play<small data-i18n="ft.soon">presto, entra in lista</small></span></a>
@@ -779,16 +787,16 @@ const I18N = {
     'nav.how': "Come funziona", 'nav.try': "Prova l'app", 'nav.features': "Funzioni", 'nav.pricing': "Prezzi", 'nav.faq': "Domande", 'nav.cta': "Entra in lista", 'nav.menu': "Menu",
     'hero.eyebrow': "Esce il 1° gennaio 2027 · preordina a metà prezzo",
     'hero.title': 'Ogni passo <span class="mark">lascia il segno</span>.',
-    'hero.lead': "Cammina, corri o pedala: le vie che percorri si colorano sulla mappa. Col tempo la tua città diventa una tela dipinta da te.",
-    'hero.cta1': "Entra in lista d'attesa", 'hero.cta2': "Prova l'app qui",
+    'hero.lead': "Cammina, corri o pedala: le vie che percorri si colorano sulla mappa. Giorno dopo giorno la tua città diventa un'opera tua.",
+    'hero.cta1': "Prenota il tuo posto", 'hero.cta2': "Prova l'app qui",
     'hero.n1': "Zero pubblicità", 'hero.n2': "Zone private attorno a casa", 'hero.n3': "In auto si ferma da sola",
     'hud.sub': "colorati", 'hud.streets': "vie", 'hud.live': "In corso", 'hud.hint': "Passa il mouse: colora tu", 'hud.fab': "Ferma e salva",
     'float1.t': "Via Garibaldi, 100%", 'float1.s': "mancavano 120 metri",
     'float2.t': "Targhetta Isola", 'float2.s': "metà quartiere colorato",
     'float3.t': "Pausa automatica", 'float3.s': "sei in auto, non coloro",
-    'proof.1': "Dati OpenStreetMap, tutte le vie d'Italia", 'proof.2': "iOS e Android", 'proof.3': "La tua posizione resta tua", 'proof.4': "Fatta da una persona sola",
+    'proof.1': "Dati OpenStreetMap, tutte le vie d'Italia", 'proof.2': "iOS e Android", 'proof.3': "La tua posizione resta tua", 'proof.4': "Un fondatore, un'idea, tutte le vie d'Italia",
     'how.eyebrow': "Come funziona", 'how.title': "Tre gesti. Poi ci pensa la città.",
-    'how.lead': "Non serve correre. Vale la passeggiata col cane, la spesa a piedi, il giro in bici della domenica.",
+    'how.lead': "Non serve correre. La passeggiata col cane, la spesa a piedi e il giro in bici della domenica valgono quanto una maratona.",
     'how.s1t': "Premi Inizia", 'how.s1p': "Un tocco e via. Il telefono resta in tasca: FootPaint capisce da sola se cammini, corri o pedali.",
     'how.s2t': "Le vie si colorano", 'how.s2p': "Ogni via percorsa diventa verde sulla mappa. I metri nuovi contano, quelli già fatti restano tuoi.",
     'how.s3t': "Condividi la tua mappa", 'how.s3p': "A fine sessione hai un'immagine pronta per le storie. E una percentuale di quartiere che sale.",
@@ -810,7 +818,7 @@ const I18N = {
     'bd.5n': "Due ruote", 'bd.5d': "10 km colorati in bici. Le vie in bici hanno il tratteggio.",
     'bd.6n': "Nottambulo", 'bd.6d': "Una sessione finita dopo mezzanotte. Non ancora conquistata.",
     'feat.eyebrow': "Funzioni", 'feat.title': "Non ti cronometra. Ti colora.",
-    'feat.lead': 'Niente cronometro, niente classifiche. Solo la domanda "dove sono stato?" con una risposta dipinta.',
+    'feat.lead': 'Niente cronometro, niente classifiche. Una sola domanda, "dove sono stato?", e una risposta che si vede.',
     'feat.a.t': "Portami a… passando per vie nuove", 'feat.a.p': "Scrivi una destinazione o quanti km vuoi fare. FootPaint propone un percorso che passa dove non sei mai stato, con la stima dei metri nuovi.",
     'feat.b.t': "Targhette di quartiere", 'feat.b.p': "Ogni quartiere ha una percentuale. Al 100% la targhetta è tua. Per sempre.",
     'feat.c.t': "Zone private", 'feat.c.p': "Attorno a casa e al lavoro la pittura resta, ma nessuno vede da dove parti.",
@@ -836,21 +844,25 @@ const I18N = {
     'j.3d': "Fatto", 'j.3': "Gruppi con obiettivo comune e invito con un link che apre l'app.",
     'j.4d': "Fatto", 'j.4': '"Portami a…" scrivendo il nome della via, con i km da fare e i metri nuovi stimati.',
     'j.5d': "Prossimo", 'j.5': "Colorazione in tempo reale sul telefono e auto-pausa da fermo. Poi i primi tester.",
-    'f.eyebrow': "Dietro le quinte",
-    'f.quote': '"Sto costruendo FootPaint da solo, un\'ora al giorno. Ogni settimana racconto cosa ha funzionato e cosa no."',
-    'f.p': "Niente ufficio stampa. Solo una mappa che si colora e una persona che la fa funzionare. Se vuoi seguire il percorso, è su Instagram e LinkedIn.",
-    'w.eyebrow': "Lista d'attesa", 'w.title': "Prima pennellata il 1° gennaio 2027",
+    'j.0d': "Oggi", 'j.0': "Cosa funziona già nell'app, prima ancora di uscire.",
+    'f.eyebrow': "La visione", 'f.title': "Non un'altra app di fitness. La prima mappa che dipingi vivendo.",
+    'f.1': "Ogni città è una tela bianca. Chi la percorre, la colora.",
+    'f.2': "Si parte dall'Italia, con tutte le vie di tutte le città già sulla mappa.",
+    'f.3': "Zero pubblicità, zero dati venduti. Il modello è semplice: chi colora di più sceglie Plus.",
+    'f.p': "FootPaint nasce da una domanda semplice: dove sono stato davvero? La risposta è una mappa che cresce con te, via dopo via. Preordina oggi e colora dal primo giorno.",
+    'f.cta': "Prenota il tuo posto",
+    'w.eyebrow': "Lista d'attesa", 'w.title': "La prima pennellata è tua. Il 1° gennaio 2027.",
     'w.lead': "Lascia nome ed email: ti contatto io quando è il momento, al massimo una email al mese. Chi preordina entro il 31 dicembre 2026 usa la versione di prova da subito.",
     'w.name': "Nome", 'w.choice': "Cosa ti interessa", 'w.opt1': "Lista d'attesa, versione Free", 'w.opt2': "Preordine Plus a metà prezzo", 'w.ph': "La tua email", 'w.cta': "Entra in lista", 'w.ok': "Si apre la tua posta con il messaggio pronto: invialo e sei in lista.", 'w.subject': "Lista d'attesa FootPaint", 'w.body': "Ciao, sono {n}. {c}. La mia email: {e}",
     'w.small': "Niente spam, niente cessione a terzi. Ti cancelli con una email.",
-    'faq.eyebrow': "Domande", 'faq.title': "Quello che mi chiedono di solito",
+    'faq.eyebrow': "Domande", 'faq.title': "Le domande che ci fanno più spesso",
     'faq.1q': "È come Strava?", 'faq.1a': "Si affianca a Strava, non la sostituisce. Strava ti cronometra, FootPaint colora la mappa delle vie che hai percorso. Puoi usarle insieme.",
     'faq.2q': "Devo correre?", 'faq.2a': "Non per forza. Puoi semplicemente passeggiare, fare la spesa a piedi, portare a spasso il cane o fare un giro in bici. Il ritmo non conta, contano le vie percorse.",
     'faq.3q': "Che fine fa la mia posizione?", 'faq.3a': "Resta sul tuo telefono e sul server di FootPaint. Nessuna pubblicità, nessuna vendita a terzi. Le zone private nascondono casa e lavoro a chiunque veda la tua mappa.",
     'faq.4q': "Consuma molta batteria?", 'faq.4a': "FootPaint usa il GPS solo durante la sessione e lo spegne quando sei fermo o in auto.",
     'faq.5q': "Funziona nella mia città?", 'faq.5a': "Sì, le vie di tutta Italia sono già nella mappa, dalle grandi città ai paesi.",
     'faq.6q': "Quando esce?", 'faq.6a': "Il 1° gennaio 2027. Chi preordina entro il 31 dicembre 2026 usa la versione di prova da subito e paga la metà per il primo anno.",
-    'ft.tag': "Cammina, corri o pedala: le vie che percorri si colorano. La tua città è una tela.", 'ft.soon': "presto, entra in lista",
+    'ft.tag': "Ogni passo lascia il segno. La tua città è la tela, tu hai il pennello.", 'ft.soon': "presto, entra in lista",
     'ft.app': "App", 'ft.follow': "Segui", 'ft.contact': "Contatti", 'ft.privacy': "Privacy",
     'ft.osm': "Mappe: dati © OpenStreetMap contributors, licenza ODbL",
   },
@@ -860,16 +872,16 @@ const I18N = {
     'nav.how': "How it works", 'nav.try': "Try the app", 'nav.features': "Features", 'nav.pricing': "Pricing", 'nav.faq': "FAQ", 'nav.cta': "Join the list", 'nav.menu': "Menu",
     'hero.eyebrow': "Out on 1 January 2027 · pre-order at half price",
     'hero.title': 'Every step <span class="mark">leaves a mark</span>.',
-    'hero.lead': "Walk, run or ride: the streets you cover get painted on the map. Over time your city becomes a canvas, painted by you.",
-    'hero.cta1': "Join the waiting list", 'hero.cta2': "Try the app here",
+    'hero.lead': "Walk, run or ride: the streets you cover get painted on the map. Day after day your city becomes your own work of art.",
+    'hero.cta1': "Reserve your spot", 'hero.cta2': "Try the app here",
     'hero.n1': "No ads", 'hero.n2': "Private zones around home", 'hero.n3': "Pauses by itself in the car",
     'hud.sub': "painted", 'hud.streets': "streets", 'hud.live': "Live", 'hud.hint': "Move your mouse: you paint", 'hud.fab': "Stop and save",
     'float1.t': "Via Garibaldi, 100%", 'float1.s': "120 metres were missing",
     'float2.t': "Isola badge", 'float2.s': "half the district painted",
     'float3.t': "Auto pause", 'float3.s': "you're in a car, not painting",
-    'proof.1': "OpenStreetMap data, every street in Italy", 'proof.2': "iOS and Android", 'proof.3': "Your location stays yours", 'proof.4': "Built by one person",
+    'proof.1': "OpenStreetMap data, every street in Italy", 'proof.2': "iOS and Android", 'proof.3': "Your location stays yours", 'proof.4': "One founder, one idea, every street in Italy",
     'how.eyebrow': "How it works", 'how.title': "Three taps. The city does the rest.",
-    'how.lead': "No need to run. The dog walk, the groceries on foot, the Sunday bike ride all count.",
+    'how.lead': "No need to run. The dog walk, the groceries on foot and the Sunday bike ride count as much as a marathon.",
     'how.s1t': "Tap Start", 'how.s1p': "One tap and go. The phone stays in your pocket: FootPaint works out by itself whether you walk, run or ride.",
     'how.s2t': "Streets get painted", 'how.s2p': "Every street you cover turns green on the map. New metres count, the ones you've done stay yours.",
     'how.s3t': "Share your map", 'how.s3p': "At the end you get an image ready for your stories. And a district percentage that keeps climbing.",
@@ -891,7 +903,7 @@ const I18N = {
     'bd.5n': "Two wheels", 'bd.5d': "10 km painted by bike. Bike streets get the dashed stroke.",
     'bd.6n': "Night owl", 'bd.6d': "A session ended after midnight. Not earned yet.",
     'feat.eyebrow': "Features", 'feat.title': "It doesn't time you. It paints you.",
-    'feat.lead': 'No stopwatch, no leaderboards. Just the question "where have I been?" with a painted answer.',
+    'feat.lead': 'No stopwatch, no leaderboards. One question, "where have I been?", and an answer you can see.',
     'feat.a.t': "Take me to… through new streets", 'feat.a.p': "Type a destination or how many km you want. FootPaint suggests a route through places you've never been, with an estimate of new metres.",
     'feat.b.t': "District badges", 'feat.b.p': "Every district has a percentage. At 100% the badge is yours. Forever.",
     'feat.c.t': "Private zones", 'feat.c.p': "Around home and work the paint stays, but nobody sees where you start from.",
@@ -917,21 +929,25 @@ const I18N = {
     'j.3d': "Done", 'j.3': "Groups with a shared goal and an invite link that opens the app.",
     'j.4d': "Done", 'j.4': '"Take me to…" by typing a street name, with the km you want and estimated new metres.',
     'j.5d': "Next", 'j.5': "Real-time painting on the phone and auto-pause when you stop. Then the first testers.",
-    'f.eyebrow': "Behind the scenes",
-    'f.quote': '"I\'m building FootPaint on my own, one hour a day. Every week I share what worked and what didn\'t."',
-    'f.p': "No press office. Just a map that gets painted and one person keeping it running. If you want to follow along, it's on Instagram and LinkedIn.",
-    'w.eyebrow': "Waiting list", 'w.title': "First brushstroke on 1 January 2027",
+    'j.0d': "Today", 'j.0': "What already works in the app, before it's even out.",
+    'f.eyebrow': "The vision", 'f.title': "Not another fitness app. The first map you paint by living.",
+    'f.1': "Every city is a blank canvas. Whoever walks it, paints it.",
+    'f.2': "We start in Italy, with every street of every city already on the map.",
+    'f.3': "No ads, no data sold. The model is simple: whoever paints more picks Plus.",
+    'f.p': "FootPaint starts from a simple question: where have I really been? The answer is a map that grows with you, street after street. Pre-order today and paint from day one.",
+    'f.cta': "Reserve your spot",
+    'w.eyebrow': "Waiting list", 'w.title': "The first brushstroke is yours. On 1 January 2027.",
     'w.lead': "Leave your name and email: I'll contact you when it's time, at most one email a month. Pre-orders by 31 December 2026 use the trial version right away.",
     'w.name': "Name", 'w.choice': "What you're interested in", 'w.opt1': "Waiting list, Free version", 'w.opt2': "Plus pre-order at half price", 'w.ph': "Your email", 'w.cta': "Join the list", 'w.ok': "Your mail app opens with the message ready: send it and you're on the list.", 'w.subject': "FootPaint waiting list", 'w.body': "Hi, I'm {n}. {c}. My email: {e}",
     'w.small': "No spam, never shared with third parties. Unsubscribe with one email.",
-    'faq.eyebrow': "FAQ", 'faq.title': "What people usually ask me",
+    'faq.eyebrow': "FAQ", 'faq.title': "The questions we get most",
     'faq.1q': "Is it like Strava?", 'faq.1a': "It sits next to Strava, it doesn't replace it. Strava times you, FootPaint paints the map of the streets you've covered. You can use both.",
     'faq.2q': "Do I have to run?", 'faq.2a': "Not necessarily. You can simply go for a walk, do the groceries on foot, walk the dog or go for a bike ride. Speed doesn't matter, the streets you cover do.",
     'faq.3q': "What happens to my location?", 'faq.3a': "It stays on your phone and on FootPaint's server. No ads, never sold to anyone. Private zones hide home and work from anyone who sees your map.",
     'faq.4q': "Does it drain the battery?", 'faq.4a': "FootPaint uses GPS only during a session and switches it off when you stop or get in a car.",
     'faq.5q': "Does it work in my town?", 'faq.5a': "Yes, every street in Italy is already on the map, from big cities to villages.",
     'faq.6q': "When does it come out?", 'faq.6a': "On 1 January 2027. If you pre-order by 31 December 2026 you use the trial version right away and pay half for the first year.",
-    'ft.tag': "Walk, run or ride: the streets you cover get painted. Your city is a canvas.", 'ft.soon': "soon, join the list",
+    'ft.tag': "Every step leaves a mark. Your city is the canvas, you hold the brush.", 'ft.soon': "soon, join the list",
     'ft.app': "App", 'ft.follow': "Follow", 'ft.contact': "Contact", 'ft.privacy': "Privacy",
     'ft.osm': "Maps: data © OpenStreetMap contributors, ODbL licence",
   }
